@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Album example · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+  </style>
+      <!-- Custom styles for this template -->
+  <link href="../css/album.css" rel="stylesheet">
+</head>
+<body id="tab_body" onload="connected()">
+  <header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">A propos</h4>
+          <p class="text-muted">Tayara, Site d'achat et vente en Tunisie.</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <ul class="list-unstyled">
+            <li><a href="../html/inscritayara.html" class="text-white">S'inscrire</a></li>
+            <li><a href="../html/logTayra.html" class="text-white">Login</a></li>
+            <li><a href="#" class="text-white" onclick="logout()">Déconnexion</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <strong id="welcome">Bienvenue </strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+  </header>
+  <script src="../js/js.js" charset="utf-8"></script>
+</body>
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Tayara</h1>
+      <p class="lead text-muted">Premier site d'achat et de vente en Tunisie.</p>
+      <p>
+        <a href="../html/annonces.html" class="btn btn-primary my-2" onclick="test()">Nouvelle annonce</a>
+        <a href="../html/welcome.html" class="btn btn-secondary my-2">Rechercher</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <h3>Ajouter une nouvelle annonce:</h3>
+      <form class="container">
+        <div class="row">
+              <label for="titre">Titre</label>
+              <input type="text" class="form-control" id="titre">
+        </div>
+        <div class="row">
+          <label for="cat">Catégorie</label>
+          <select class="form-control" id="cat">
+            <option>Immobilier</option>
+            <option>Véhicules</option>
+            <option>Pour la Maison et Jardin</option>
+            <option>Loisirs et Divertissement</option>
+            <option>Informatique et multimedia</option>
+            <option>Emploi et Services</option>
+            <option>Habillement et Bien etre</option>
+            <option>Autres</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="description">Description</label>
+          <textarea type="text" class="form-control" id="description"></textarea>
+        </div>
+        <br>
+        <div class="row">
+          <p>Choisir fichier:</p>
+          <div class="fileinput fileinput-new col-md-8">
+              <input type="file" id="myFile" name="filename" accept="jpg/png/tiff">
+          </div>
+        </div>
+        <div class="row">
+          <label for="prix">Prix (en DT)</label>
+          <input type="number" class="form-control" id="prix">
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary" onClick="save_annonce()">Ajouter</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">haut</a>
+    </p>
+    <p>Par amira et habib!</p>
+    <p>Five Point academy</a>.</p>
+  </div>
+</footer>
+</html>

@@ -1,0 +1,23 @@
+body{
+    background-image: url('ins2.jpg ')!important;
+    background-size: 100% !important;
+}
+.b{
+    text-align: center !important;
+    padding-top: 8%!important;
+    height: 80% !important;
+    width: 80% !important;
+    padding-left: 20%;
+    font-family: 'Courier New', C
+    ourier, monospace;
+    font-style: italic;
+    font-size: large;
+    text-decoration: cornflowerblue;
+    text-shadow: 2px 2px;
+
+
+}
+. alert-primary{
+    position: fixed !important;
+    
+}
